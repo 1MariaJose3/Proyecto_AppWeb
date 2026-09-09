@@ -1,0 +1,210 @@
+#mensaje-rector.programas {
+  background-color: #ffffff;
+  padding: 40px 48px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  color: #222222;
+  max-width: 850px;
+  margin: 15px auto;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+/* === Títulos === */
+#mensaje-rector.programas h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #34495e;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#mensaje-rector.programas h3 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #2f4d70;
+  margin: 32px 0 16px;
+  padding-bottom: 8px;
+}
+
+#mensaje-rector.programas h4 {
+  font-size: 18px;
+  margin: 12px 0 5px;
+  color: #222222;
+  font-weight: 600;
+}
+
+#mensaje-rector.programas .universidad-descripcion p {
+  text-align: justify;
+  color: #222222;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* === Párrafos y listas === */
+#mensaje-rector.programas p {
+  text-align: justify;
+}
+
+#mensaje-rector.programas ul ul {
+  list-style-type: circle;
+  padding-left: 20px;
+  margin-top: 6px;
+}
+
+#mensaje-rector.programas li {
+  margin-bottom: 6px;
+}
+
+
+#mensaje-rector.programas .tabs-competencias {
+  margin-top: 3rem;
+}
+
+#mensaje-rector.programas .titulo-tabs {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2f4d70;
+  margin-bottom: 1.2rem;
+}
+
+/* Botones de pestaña */
+#mensaje-rector.programas .tab-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+#mensaje-rector.programas .tab-btn {
+  padding: 10px 16px;
+  background-color: #f0f8ff;
+  border: 2px solid #004080;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #003366;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+#mensaje-rector.programas .tab-btn.active,
+#mensaje-rector.programas .tab-btn:hover {
+  background-color: #004080;
+  color: #ffffff;
+}
+
+/* Panel de contenido */
+#mensaje-rector.programas .tab-panel {
+  display: none;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#mensaje-rector.programas .tab-panel.active {
+  display: block;
+}
+
+#mensaje-rector.programas .tab-panel ul {
+  padding-left: 20px;
+  color: #333;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+#mensaje-rector.programas .sublista {
+  margin-top: 6px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+
+
+
+
+
+/*Programa Academico*/
+
+#mensaje-rector.programas .seccion-acordeon .accordion-button {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #004085;
+    cursor: pointer;
+}
+
+#mensaje-rector.programas .seccion-acordeon .accordion-button:hover {
+    background-color: #eef4ff;
+}
+
+#mensaje-rector.programas .seccion-acordeon .accordion-body {
+    padding: 1rem;
+    background: #f9f9f9;
+}
+
+#mensaje-rector.programas .seccion-acordeon .lista-contenido {
+    list-style: none;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+#mensaje-rector.programas .seccion-acordeon .lista-contenido li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+#mensaje-rector.programas .seccion-acordeon .titulo-item {
+    font-weight: bold;
+    color: #1a202c;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+#mensaje-rector.programas .seccion-acordeon .sublista {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    padding-left: 0.8rem;
+    border-left: 2px dotted #bbb;
+}
+
+#mensaje-rector.programas .seccion-acordeon .sublista li {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Estilos específicos para módulos */
+
+#mensaje-rector.programas .seccion-acordeon.modulos {
+    background-color: #f0f8ff; /* Color suave para diferenciar seccion modulos */
+    border: 1px solid #cce4ff;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+}
+
+#mensaje-rector.programas .seccion-acordeon.modulos .accordion-button {
+    color: #002752; /* Un azul más oscuro para módulos */
+    font-style: italic;
+}
+
+#mensaje-rector.programas .seccion-acordeon.modulos .lista-contenido li.item-texto {
+    color: #003366;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+#mensaje-rector.programas .seccion-acordeon.modulos .titulo-item {
+    color: #001f4d;
+    font-weight: 700;
+    font-style: normal;
+}
+
+

@@ -1,0 +1,147 @@
+#mensaje-rector.turismo {
+  background-color: #ffffff; /* fondo blanco */
+  padding: 32px 48px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  font-family: 'Georgia', serif;
+  color: #222222;
+  max-width: 850px;
+  margin: 15px auto;
+  text-align: justify;
+  line-height: 1.75;
+  font-size: 18px;
+}
+
+/* Título principal */
+#mensaje-rector.turismo .titulo-atractivos {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #2f4d70;
+  text-align: left;
+}
+
+/* Tarjeta de cada atractivo turístico */
+.tarjeta-atractivo {
+  background-color: #ffffff;
+  padding: 1.8rem 2rem;
+  margin-bottom: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #e0e8ee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* Subtítulo de sección */
+.tarjeta-atractivo h3.subtitulo {
+  background-color: #f5f8fb;
+  border-left: 6px solid #13395a;
+  border-radius: 8px;
+  margin-bottom: 22px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #34495e;
+  text-align: left;
+  padding: 13px 16px;
+  box-shadow: inset 0 0 0 1px #c7d4e3;
+}
+
+/* Galería de imágenes */
+.galeria-atractivo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 1.8rem;
+}
+
+.galeria-atractivo img {
+  width: 300px;
+  height: 210px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-atractivo img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  #mensaje-rector.turismo {
+    padding: 28px 32px;
+    max-width: 650px;
+    font-size: 16.5px;
+  }
+
+  #mensaje-rector.turismo .titulo-atractivos {
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+
+  .tarjeta-atractivo {
+    padding: 1.5rem 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+  }
+
+  .tarjeta-atractivo h3.subtitulo {
+    font-size: 22px;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+  }
+
+  .galeria-atractivo {
+    gap: 14px;
+    margin-top: 1.5rem;
+  }
+
+  .galeria-atractivo img {
+    width: 260px;
+    height: 180px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 599px) {
+  #mensaje-rector.turismo {
+    padding: 20px 16px;
+    max-width: 100%;
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+
+  #mensaje-rector.turismo .titulo-atractivos {
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .tarjeta-atractivo {
+    padding: 16px 14px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .tarjeta-atractivo h3.subtitulo {
+    font-size: 18px;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+    border-left-width: 4px;
+  }
+
+  .galeria-atractivo {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .galeria-atractivo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.07);
+  }
+}

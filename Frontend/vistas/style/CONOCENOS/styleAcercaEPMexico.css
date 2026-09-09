@@ -1,0 +1,117 @@
+/* Contenedor principal */
+#mensaje-rector.epmexico {
+  background-color: #ffffff;
+  padding: 32px 48px; 
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  font-family: 'Georgia', serif;
+  color: #222222;
+  max-width: 850px;
+  margin: 5px auto;
+}
+
+/* Título */
+#mensaje-rector.epmexico h3 {
+  font-size: 38px; 
+  font-weight: 700;
+  margin-bottom: 22px; 
+  color: #2f4d70;
+}
+
+/* Subtítulo */
+#mensaje-rector.epmexico h4 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #2f4d70;
+  margin-top: 32px;  
+  margin-bottom: 16px; 
+  padding-bottom: 8px; 
+}
+
+/* Párrafos */
+#mensaje-rector.epmexico p {
+  margin-bottom: 19px; 
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.8; 
+  font-size: 18px;
+}
+
+/* Lista de campus */
+.campus-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px; 
+  margin-bottom: 32px; 
+}
+
+.campus-item {
+  display: flex;
+  align-items: center;
+  background-color: #f5f8fb;
+  border-radius: 8px;
+  padding: 13px 16px;
+  box-shadow: inset 0 0 0 1px #c7d4e3;
+  transition: background 0.3s ease;
+}
+
+.campus-item:hover {
+  background-color: #e8f0fa;
+}
+
+.campus-icon {
+  font-size: 22px; 
+  margin-right: 13px; 
+  color: #4a90e2;
+}
+
+.campus-text {
+  font-size: 18px; 
+  font-weight: 500;
+  color: #34495e;
+}
+
+/* === TABLET (600px a 1024px) === */
+@media (min-width: 600px) and (max-width: 1024px) {
+  #mensaje-rector.epmexico {
+    padding: 24px 32px;       /* menos padding */
+    max-width: 650px;         /* ancho máximo menor */
+    font-size: 16px;          /* texto un poco más pequeño */
+    margin: 15px auto;
+  }
+
+  #mensaje-rector.epmexico h3 {
+    font-size: 28px;          /* título más pequeño */
+    margin-bottom: 18px;
+  }
+
+  #mensaje-rector.epmexico h4 {
+    font-size: 20px;          /* subtítulo más pequeño */
+    margin-top: 24px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+  }
+
+  #mensaje-rector.epmexico p {
+    font-size: 16px;          /* párrafos más pequeños */
+    margin-bottom: 14px;
+    line-height: 1.6;         /* línea un poco más compacta */
+  }
+
+  .campus-list {
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .campus-item {
+    padding: 10px 12px;
+  }
+
+  .campus-icon {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .campus-text {
+    font-size: 16px;
+  }
+}

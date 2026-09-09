@@ -1,0 +1,175 @@
+/* === Vista Restaurantes (estilo alternativo) === */
+#mensaje-rector.restaurantes {
+  background-color: #fdfdfc;
+  padding: 32px 48px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  font-family: 'Georgia', serif;
+  color: #222222;
+  max-width: 850px;
+  margin: 15px auto;
+  border-radius: 12px;
+  text-align: justify;
+  line-height: 1.75;
+  font-size: 18px;
+}
+
+/* Título principal */
+#mensaje-rector.restaurantes h3 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2f4d70;
+}
+
+/* Subtítulos de restaurantes */
+#mensaje-rector.restaurantes h4 {
+  background-color: #f5f8fb;
+  border-left: 6px solid #13395a;
+  border-radius: 8px;
+  margin-bottom: 22px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #34495e;
+  text-align: left;
+  padding: 13px 16px;
+  box-shadow: inset 0 0 0 1px #c7d4e3; 
+}
+
+/* Sección de cada restaurante */
+.card-restaurante {
+  background-color: #ffff;
+  padding: 1.8rem 2rem;
+  margin-bottom: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #e0e8ee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* Texto de restaurante */
+.card-restaurante p {
+  margin-bottom: 14px;
+  color: #222222;
+  font-size: 15px;
+}
+
+/* Galería de imágenes */
+.galeria-restaurantes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 1.8rem;
+}
+
+.galeria-restaurantes img {
+  width: 300px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-restaurantes img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+
+/* === TABLET (600px a 1024px) === */
+@media (min-width: 600px) and (max-width: 1024px) {
+  #mensaje-rector.restaurantes {
+    max-width: 650px;
+    padding: 24px 30px;
+    font-size: 16px;
+  }
+
+  #mensaje-rector.restaurantes h3 {
+    font-size: 30px;
+  }
+
+  #mensaje-rector.restaurantes h4 {
+    font-size: 20px;
+    padding: 10px 14px;
+  }
+
+  .card-restaurante {
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .card-restaurante p {
+    font-size: 14px;
+  }
+
+  .galeria-restaurantes {
+    gap: 14px;
+  }
+
+  .galeria-restaurantes img {
+    width: 220px;
+    height: 155px;
+  }
+}
+
+@media (max-width: 599px) {
+  #mensaje-rector.restaurantes {
+    max-width: 100%;
+    padding: 20px 16px;
+    font-size: 15px;
+  }
+
+  #mensaje-rector.restaurantes h3 {
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  #mensaje-rector.restaurantes h4 {
+    font-size: 20px;
+    padding: 10px 14px;
+    margin-bottom: 20px;
+  }
+
+  .card-restaurante {
+    padding: 1.2rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .card-restaurante p {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .galeria-restaurantes {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    margin-top: 1rem;
+    -webkit-overflow-scrolling: touch; /* scroll suave en iOS */
+    scrollbar-width: thin;
+  }
+
+  .galeria-restaurantes::-webkit-scrollbar {
+    height: 6px;
+  }
+  .galeria-restaurantes::-webkit-scrollbar-thumb {
+    background-color: rgba(66, 124, 162, 0.5);
+    border-radius: 10px;
+  }
+
+  .galeria-restaurantes img {
+    flex: 0 0 auto;
+    width: 80vw;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .galeria-restaurantes img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+}

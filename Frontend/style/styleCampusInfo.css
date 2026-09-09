@@ -1,0 +1,170 @@
+.campus-contenedor {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  padding: 60px 0;
+}
+
+.campus h1 {
+  font-size: 96px;
+  color: #031424;
+  text-align: center;
+  padding: 20px 0 20px;
+  font-weight: bold;
+}
+
+.campus_foto {
+  width: 100%;
+  border-radius: 16px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  object-fit: cover;
+}
+
+.campus_foto:hover {
+  transform: scale(1.05) rotate3d(1, 1, 0, 5deg);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+
+.campus_texto {
+  width: 600px;
+  font-size: 22px;
+  text-align: justify;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.campus_texto p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.llamado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+  flex-wrap: wrap;
+}
+
+.llamado-texto {
+  line-height: 1.3;
+  white-space: normal;
+  max-width: 500px;
+}
+
+/* Flechas animadas */
+.flecha-icono {
+  font-size: 40px;
+  color: #031424;
+  animation: flechaAnimada 1.5s infinite ease-in-out;
+  transition: color 0.3s ease;
+}
+
+
+@keyframes flechaAnimada {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.frase {
+  width: 100%;
+  margin-top: 60px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991.98px) {
+  .campus h1 {
+    font-size: 55px;
+    padding-top: 1px;
+    padding-bottom: 30px;
+  }
+
+  .campus_foto {
+    width: 85%;
+    height: auto;
+    margin: 0 auto 20px;
+  }
+
+  .campus_texto {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 19px;
+  }
+
+  .llamado {
+    font-size: 20px;
+    gap: 5px;
+  }
+
+  .flecha-icono {
+    font-size: 25px;
+  }
+
+  .llamado-texto {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .campus h1 {
+    font-size: 50px;
+    padding-bottom: 30px;
+  }
+  .llamado {
+    flex-wrap: nowrap; /* evitar que las flechas bajen */
+    gap: 8px; /* reducir un poco el espacio */
+    font-size: 18px; /* texto más pequeño */
+    justify-content: center;
+  }
+  .llamado-texto {
+    max-width: calc(100% - 50px); /* dejar espacio para las flechas */
+    white-space: normal;
+  }
+  .flecha-icono {
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 1198px) and (min-width: 992px) {
+  .campus h1 {
+    font-size: 68px;
+    padding-bottom: 20px;
+  }
+
+  .campus_foto {
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+  .campus_texto {
+    width: 50%;
+    font-size: 18px;
+    padding-top: 20px;
+  }
+
+  .llamado {
+    font-size: 22px;
+    gap: 8px;
+  }
+
+  .flecha-icono {
+    font-size: 20px;
+  }
+
+  .llamado-texto {
+    max-width: 90%;
+  }
+
+  .frase {
+    margin-top: 40px;
+  }
+}

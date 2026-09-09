@@ -1,0 +1,486 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style/styleBotonesFlotantes.css">
+    <link rel="stylesheet" href="style/styleHeaderMenu.css">
+    <link rel="stylesheet" href="style/styleCampusInfo.css">
+    <link rel="stylesheet" href="style/styleComunidad.css">
+    <link rel="stylesheet" href="style/styleOfertaAcademica.css">
+    <link rel="stylesheet" href="style/styleEventosbtnBajos.css">
+    <link rel="stylesheet" href="style/styleFormulario.css">
+    <link rel="stylesheet" href="style/styleCampus.css">
+    <link rel="stylesheet" href="style/styleSiguenos.css">
+    <link rel="stylesheet" href="style/styleFooter.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap JS Bundle (Popper + Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+    <!-- BOTONES FLOTANTES -->
+    <div class="redes-flotantes-abajo">
+    </div>
+
+    <!-- HEADER-MENU -->
+    <header>
+        <nav class="navbar navbar-expand-lg cabeza_menu">
+            <!-- Logos -->
+            <div class="logo_menu d-flex align-items-center"></div>
+
+            <!-- Botón Hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas"
+                aria-controls="menuOffcanvas">
+                <i class="fas fa-bars"></i>
+            </button>
+
+
+            <!-- Contenido visible solo en escritorio -->
+            <div class="menu_contenido d-none d-lg-flex">
+                <div id="menuEscritorio" class="btns_menu"></div>
+                <div id="redesEscritorio" class="redes_menu"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Offcanvas del menú lateral (Bootstrap) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 id="menuOffcanvasLabel" class="text-dark"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="menuOffcanvasContent" class="btns_menu"></div>
+            <div id="redesOffcanvasContent" class="redes_menu"></div>
+        </div>
+    </div>
+
+    <!-- Contenedor del mega menú y submenús para escritorio -->
+    <div id="megaMenuGlobalContainer"></div>
+    <div id="submenuPanel" class="submenu_panel"></div>
+
+    <!-- SECCION VIDEO SEGUNDO APARTADO  -->
+    <section class="video-contenedor">
+        <video width="100%" autoplay muted loop id="videoCampus"> </video>
+    </section>
+
+    <!--SECCION MONTERREY TERCER APARTADO-->
+    <section class="campus-contenedor" id="infoCampus"></section>
+
+    <!-- IMÁGENES BOTONES COMUNIDAD, REVISTA, OCCCS -->
+    <div class="img-ccro"></div>
+
+    <!-- SECCION OFERTA ACADEMICA QUINTO APARTADO-->
+    <section class="oferta-contenedor container-fluid" id="ofertaAcademica"></section>
+
+    <!-- CONTENEDOR DE BOTONES CIRCULARES -->
+    <div class="container-btnbajos img-ccro"></div>
+
+    <!-- SECCIÓN FORMULARIO ACADÉMICA SEXTO APARTADO -->
+    <section id="contacto" class="seccion_formulario py-4" data-aos="fade-up" data-aos-duration="1000">
+        <!-- <form id="formulario" action="send_mail.php" method="post" onsubmit="return valida(event)"> -->
+        <form id="formulario" onsubmit="return enviarFormulario(event)">  
+            <div class="container form-contenedor flex-wrap">
+                <!-- Formulario -->
+                <div class="form-cuadro col-12 col-lg-7" data-aos="fade-right" data-aos-delay="200">
+                    <h2>• SOLICITA INFORMES •</h2>
+
+                    <!-- Nombre y Email -->
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <div class="dato">
+                                <label for="innombre">Nombre(s)</label>
+                                <input id="innombre" type="text" name="nombre" maxlength="30"
+                                    pattern="^[A-Za-z\s]{1,30}$" required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="dato">
+                                <label for="apellidos">Apellidos</label>
+                                <input id="apellidos" type="text" name="apellidos" maxlength="30"
+                                    pattern="^[A-Za-z\s]{1,30}$" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- celular y Email -->
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <div class="dato">
+                                <label for="incelular">Celular</label>
+                                <input id="incelular" type="tel" name="celular" pattern="^\d{10}$" maxlength="10" required  >
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="dato">
+                                <label for="email">E-mail</label>
+                                <input id="email" type="email" name="email" maxlength="50"
+                                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dato" id="categoria-container">
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="" disabled selected>Seleccione una categoría</option>
+                    </select>
+                    </div>
+
+                    <div class="dato" id="programa-container">
+                    <label for="programa">Programa de Interés</label>
+                    <select id="programa" name="programa" required>
+                        <option value="" disabled selected>Seleccione un programa</option>
+                    </select>
+                    </div>
+
+
+                    <!-- Campus -->
+                    <div class="dato">
+                        <label for="campus">Campus de Interés</label>
+                        <select id="campus" name="campus" required>
+                            <option value="" disabled selected>Seleccione un campus</option>
+                            <option value="Virtual">Campus virtual</option>
+                            <option value="Guadalajara">Guadalajara</option>    
+                            <option value="Merida">Mérida</option>
+                            <option value="Monterrey">Monterrey</option>
+                            <option value="Puebla">Puebla</option>
+                        </select>
+                    </div>
+
+                    <!-- Estado -->
+                    <div class="dato">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado" required>
+                            <option value="" disabled selected>Seleccione un estado</option>
+                            <option value="Aguascalientes">Aguascalientes</option>
+                            <option value="Baja California">Baja California</option>
+                            <option value="Baja California Sur">Baja California Sur</option>
+                            <option value="Campeche">Campeche</option>
+                            <option value="Chiapas">Chiapas</option>
+                            <option value="Chihuahua">Chihuahua</option>
+                            <option value="Ciudad de México">Ciudad de México</option>
+                            <option value="Coahuila">Coahuila</option>
+                            <option value="Colima">Colima</option>
+                            <option value="Durango">Durango</option>
+                            <option value="Estado de México">Estado de México</option>
+                            <option value="Guanajuato">Guanajuato</option>
+                            <option value="Guerrero">Guerrero</option>
+                            <option value="Hidalgo">Hidalgo</option>
+                            <option value="Jalisco">Jalisco</option>
+                            <option value="Michoacán">Michoacán</option>
+                            <option value="Morelos">Morelos</option>
+                            <option value="Nayarit">Nayarit</option>
+                            <option value="Nuevo León">Nuevo León</option>
+                            <option value="Oaxaca">Oaxaca</option>
+                            <option value="Puebla">Puebla</option>
+                            <option value="Querétaro">Querétaro</option>
+                            <option value="Quintana Roo">Quintana Roo</option>
+                            <option value="San Luis Potosí">San Luis Potosí</option>
+                            <option value="Sinaloa">Sinaloa</option>
+                            <option value="Sonora">Sonora</option>
+                            <option value="Tabasco">Tabasco</option>
+                            <option value="Tamaulipas">Tamaulipas</option>
+                            <option value="Tlaxcala">Tlaxcala</option>
+                            <option value="Veracruz">Veracruz</option>
+                            <option value="Yucatán">Yucatán</option>
+                            <option value="Zacatecas">Zacatecas</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+
+                    <!-- Mensaje -->
+                    <div class="dato">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" maxlength="80" required></textarea>
+                    </div>
+                    
+                    <div class="g-recaptcha" data-sitekey="6LfIhpcrAAAAABKJ29edZB-E9b-tl4OQpTNQuGfl"></div>
+
+                    <!-- Botón -->
+                    <div class="btn_contenedor text-center">
+                        <button class="btn_enviar" type="submit">ENVIAR CORREO</button>
+                    </div>
+                </div>
+
+                <!-- Imagen -->
+                <div class="imagen_contenedor col-12 col-lg-5" data-aos="fade-left" data-aos-delay="400">
+                    <img src="fotos/F1.png" alt="Imagen informativa" class="img-fluid">
+                </div>
+            </div>
+        </form>
+        <div id="dialogo-exito" class="dialogo" style="display: none;">
+            <div class="dialogo-contenido">
+                <img src="fotos/form-logo.jpg" alt="Gracias" />
+                <h2>¡Gracias!</h2>
+                <p>Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto contigo pronto.</p>
+                <button onclick="cerrarDialogo()">Aceptar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CAMPUS -->
+    <section id="campus">
+        <div class="container text-center my-5">
+            <h1 class="campus-title">CAMPUS</h1>
+            <div class="campus-container">
+
+                <!-- Campus Puebla -->
+                <div class="campus-item" data-campus="PUEBLA">
+                    <div class="image-container">
+                        <img src="fotos/Puebla/puebla.png" alt="Campus Puebla" class="campus-image">
+                        <a href="https://www.epeac.com/" class="campus-label">PUEBLA</a>
+                    </div>
+                </div>
+
+                <!-- Campus Mérida -->
+                <div class="campus-item" data-campus="MÉRIDA">
+                    <div class="image-container">
+                        <img src="fotos/Merida/merida.png" alt="Campus Mérida" class="campus-image">
+                        <a href="https://ejemplo.com/merida" class="campus-label">MÉRIDA</a>
+                    </div>
+                </div>
+
+                <!-- Campus Guadalajara -->
+                <div class="campus-item" data-campus="GUADALAJARA">
+                    <div class="image-container">
+                        <img src="fotos/Guadalajara/guadalajara.png" alt="Campus Guadalajara" class="campus-image">
+                        <a href="https://www.epgdl.com/" class="campus-label">GUADALAJARA</a>
+                    </div>
+                </div>
+
+                <!-- Campus Monterrey -->
+                <div class="campus-item" data-campus="MONTERREY">
+                    <div class="image-container">
+                        <img src="fotos/Monterrey/monterrey.png" alt="Campus Monterrey" class="campus-image">
+                        <a href="https://epmty.com" class="campus-label">MONTERREY</a>
+                    </div>
+                </div>
+
+                <!-- Campus Virtual -->
+                <div class="campus-item" data-campus="VIRTUAL">
+                    <div class="image-container">
+                        <img src="fotos/Virtual/virtual.png" alt="Campus Virtual" class="campus-image">
+                        <a href="https://www.epdemexico.lat/" class="campus-label">VIRTUAL</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SIGUENOS SEPTIMO APARTADO-->
+    <section class="siguenos-contenedor"></section>
+
+    <!-- SECCIÓN PIE INFO OCTAVO APARTADO -->
+    <footer class="pie_contenedor container py-5" id="footer"></footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="script/script.js"></script>
+
+    <script>
+        const form = document.getElementById('formulario');
+        let startTime = Date.now();
+
+        function valida() {
+            const nombre = document.getElementById("innombre").value.trim();
+            const apellidos = document.getElementById("apellidos").value.trim();
+            const celular = document.getElementById("incelular").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const mensaje = document.getElementById("mensaje").value.trim();
+            const categoria = document.getElementById("categoria").value;
+            const programa = document.getElementById("programa").value;
+            const captcha = grecaptcha.getResponse();
+
+            if (!nombre || !apellidos || !celular || !email || !mensaje) {
+                alert("Por favor llena todos los campos obligatorios.");
+                return false;
+            }
+
+            if (!celular) {
+                alert("Por favor ingresa un número de celular válido de 10 dígitos.");
+                return false;
+            }
+
+            if (!categoria) {
+                alert("Por favor selecciona una categoría.");
+                return false;
+            }
+
+            if (!programa) {
+                alert("Por favor selecciona un programa.");
+                return false;
+            }
+
+            if (captcha.length === 0) {
+                alert("Por favor verifica que no eres un robot.");
+                return false;
+            }
+
+            if (Date.now() - startTime < 3000) {
+                alert("Espera unos segundos antes de enviar.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function enviarFormulario(event) {
+            event.preventDefault();
+
+            if (!valida()) {
+                return false;
+            }
+
+            const formData = new FormData(form);
+            //http://localhost:50429/GetData.aspx
+            //http://18.219.188.248/PaginaMaestra/EnviarFormulario.aspx
+            fetch("http://localhost:50429//EnviarFormulario.aspx", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Limpia el formulario
+                    form.reset();
+                    grecaptcha.reset(); // Limpia reCAPTCHA
+
+                    // Muestra el cuadro de diálogo
+                    document.getElementById("dialogo-exito").style.display = "flex";
+                } else {
+                    alert("Error al enviar el mensaje.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Error al enviar el formulario. Inténtalo más tarde.");
+            });
+
+            return false;
+        }
+
+        function cerrarDialogo() {
+            document.getElementById("dialogo-exito").style.display = "none";
+        }
+    </script>
+    
+    <script>
+        // Obtener nombre del campus desde la URL (?campus=Monterrey)
+        function obtenerNombreCampus() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('campus');
+        }
+
+        // Cargar el archivo JSON
+        function cargarDatosJSON(url) {
+            return fetch(url).then(response => response.json());
+        }
+
+        function iniciar() {
+            const campusNombre = obtenerNombreCampus();
+            console.log("Campus recibido:", campusNombre);
+
+            //http://localhost:50429/
+            //http://18.219.188.248/PaginaMaestra/GetData.aspx
+            cargarDatosJSON("http://localhost:50429/GetData.aspx")
+                .then(data => {
+                    console.log("data.campus:", data.campus);
+
+                    if (!data.campus || !data.campus[campusNombre]) {
+                        alert("Campus no encontrado o datos incorrectos");
+                        return;
+                    }
+
+                    const campusData = data.campus[campusNombre];
+                    console.log("Campus objeto JSON:", campusData);
+
+                    let categorias = null;
+
+                    // Buscar en cada menu y en cada opcion si existe mensajeRector.categorias
+                    for (const menuItem of campusData.menu) {
+                        if (!menuItem.opciones) continue;
+
+                        for (const opcion of menuItem.opciones) {
+                            if (opcion.contenido?.mensajeRector?.categorias) {
+                                categorias = opcion.contenido.mensajeRector.categorias;
+                                break;
+                            }
+                        }
+
+                        if (categorias) break;
+                    }
+
+                    if (!categorias || categorias.length === 0) {
+                        alert("No hay categorías en el campus seleccionado");
+                        return;
+                    }
+
+                    console.log("Categorías encontradas:", categorias);
+
+                    // Ahora llenar el select de categorías
+                    const selectCategoria = document.getElementById("categoria");
+                    selectCategoria.innerHTML = '<option value="" disabled selected>Seleccione una categoría</option>';
+
+                    categorias.forEach((categoria, index) => {
+                        const option = document.createElement("option");
+                        option.value = categoria.nombre; // enviar nombre real
+                        option.textContent = categoria.nombre;
+                        selectCategoria.appendChild(option);
+                    });
+                    
+                    // Añadir listener para cuando cambie categoría y cargar programas correspondientes
+                    selectCategoria.addEventListener("change", () => {
+                        const nombreCategoriaSeleccionada = selectCategoria.value;
+                        const categoriaSeleccionada = categorias.find(cat => cat.nombre === nombreCategoriaSeleccionada);
+                        const selectPrograma = document.getElementById("programa");
+
+                        // Limpiar programas previos
+                        selectPrograma.innerHTML = '<option value="" disabled selected>Seleccione un programa</option>';
+
+                        if (categoriaSeleccionada?.programas) {
+                            categoriaSeleccionada.programas.forEach((programa, i) => {
+                                const opt = document.createElement("option");
+                                opt.value = programa.nombre;
+                                opt.textContent = programa.nombre;
+                                selectPrograma.appendChild(opt);
+                            });
+                        }
+                    });
+
+                })
+                .catch(err => {
+                    console.error("Error al cargar los datos:", err);
+                });
+        }
+
+        // Ejecutar al cargar la página
+        window.addEventListener("DOMContentLoaded", iniciar);
+    </script>
+
+</body>
+</html>
+

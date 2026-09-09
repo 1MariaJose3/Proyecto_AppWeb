@@ -1,0 +1,173 @@
+#mensaje-rector.ceremonias {
+  background-color: #ffffff;
+  padding: 32px 48px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  font-family: 'Georgia', serif;
+  color: #222222;
+  max-width: 850px;
+  margin: 20px auto;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.75;
+}
+
+/* Título principal */
+#mensaje-rector.ceremonias .ceremonias-titulo {
+  font-size: 38px;
+  font-weight: 700;
+  color: #2f4d70;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+/* Tarjeta individual */
+.ceremonia-card {
+  background: #f9fbfe;
+  border: 1px solid #d3e1f1;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* Subtítulo con ícono */
+.ceremonia-subtitulo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+#mensaje-rector.ceremonias .ceremonia-subtitulo h4 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  color: #34495e;
+  text-align: left;
+}
+
+.ceremonia-icon {
+  font-size: 1.6rem;
+  margin-right: 10px;
+  color: #4a90e2;
+}
+
+/* Párrafos */
+.ceremonia-card p {
+  margin-bottom: 14px;
+}
+
+/* Lista */
+.ceremonia-card ul {
+  margin-left: 24px;
+  margin-top: 10px;
+  list-style: disc;
+}
+
+.ceremonia-card ul li {
+  margin-bottom: 8px;
+}
+
+
+
+/* === TABLET (600px a 1024px) === */
+@media (min-width: 600px) and (max-width: 1024px) {
+  #mensaje-rector.ceremonias {
+    padding: 24px 32px;      /* menos padding */
+    max-width: 650px;        /* ancho máximo menor */
+    margin: 15px auto;
+    font-size: 16px;         /* texto un poco más pequeño */
+    line-height: 1.6;
+  }
+
+  #mensaje-rector.ceremonias .ceremonias-titulo {
+    font-size: 28px;         /* título más pequeño */
+    margin-bottom: 24px;
+  }
+
+  .ceremonia-card {
+    padding: 18px;           /* menos padding en tarjetas */
+    margin-bottom: 18px;
+  }
+
+  #mensaje-rector.ceremonias .ceremonia-subtitulo h4 {
+    font-size: 18px;         /* subtítulo más pequeño */
+  }
+
+  .ceremonia-icon {
+    font-size: 1.3rem;       /* ícono un poco más pequeño */
+    margin-right: 8px;
+  }
+
+  .ceremonia-card p {
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+
+  .ceremonia-card ul {
+    margin-left: 20px;
+    margin-top: 8px;
+  }
+
+  .ceremonia-card ul li {
+    margin-bottom: 6px;
+    font-size: 15px;
+  }
+}
+
+/* === MÓVIL (≤599px) === */
+@media (max-width: 599px) {
+  #mensaje-rector.ceremonias {
+    padding: 20px 16px;
+    max-width: 100%;
+    margin: 10px auto;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  #mensaje-rector.ceremonias .ceremonias-titulo {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .ceremonia-card {
+    background: #fff;
+    border: none;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  #mensaje-rector.ceremonias .ceremonia-subtitulo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  #mensaje-rector.ceremonias .ceremonia-subtitulo h4 {
+    font-size: 18px;
+    margin: 0;
+    text-align: left;
+  }
+
+  .ceremonia-icon {
+    font-size: 1.4rem;
+    margin: 0;
+    color: #4a90e2;
+  }
+
+  .ceremonia-card p,
+  .ceremonia-card ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .ceremonia-card ul {
+    margin-left: 20px;
+  }
+}

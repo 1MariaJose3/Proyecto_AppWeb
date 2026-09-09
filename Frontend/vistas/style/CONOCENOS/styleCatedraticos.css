@@ -1,0 +1,75 @@
+#mensaje-rector.catedraticos {
+  background-color: #ffffff;
+  padding: 32px 48px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  font-family: 'Georgia', serif;
+  color: #222222;
+  max-width: 850px;
+  margin: 15px auto;
+  border-radius: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.75;
+}
+
+/* Título */
+#mensaje-rector.catedraticos .catedraticos-titulo {
+  font-size: 38px; 
+  font-weight: 700;
+  color: #34495e;
+  margin-bottom: 21px; 
+  text-align: left;
+}
+
+#mensaje-rector.catedraticos p {
+  margin-bottom: 19px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.75;
+  font-size: 18px;
+}
+
+/* === TABLET (600px a 1024px) === */
+@media (min-width: 600px) and (max-width: 1024px) {
+  #mensaje-rector.catedraticos {
+    padding: 24px 36px;     /* Menos padding */
+    font-size: 16px;        /* Texto más pequeño */
+    max-width: 650px;
+    margin: 20px auto;
+  }
+
+  #mensaje-rector.catedraticos .catedraticos-titulo {
+    font-size: 32px;        /* Título más pequeño */
+    margin-bottom: 18px;
+  }
+
+  #mensaje-rector.catedraticos p {
+    font-size: 15px;        /* Párrafos más pequeños */
+    margin-bottom: 16px;
+  }
+}
+
+/* === MÓVIL (≤599px) === */
+@media (max-width: 599px) {
+  #mensaje-rector.catedraticos {
+    padding: 20px 16px;
+    max-width: 100%;
+    margin: 10px auto;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  #mensaje-rector.catedraticos .catedraticos-titulo {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #mensaje-rector.catedraticos p {
+    font-size: 18px;
+    margin-bottom: 14px;
+    text-align: justify;
+  }
+}

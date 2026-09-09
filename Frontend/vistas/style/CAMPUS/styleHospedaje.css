@@ -1,0 +1,342 @@
+/* === CONTENEDOR PRINCIPAL === */
+#mensaje-rector.hospedaje {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Georgia', serif;
+  color: #222222;
+}
+
+/* === Contenedor principal de hospedaje === */
+.mensaje-texto.hospedaje {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+  color: #222222;
+}
+
+/* Párrafos */
+#mensaje-rector.hospedaje .mensaje-texto.hospedaje p {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 17px;
+  color: #222222;
+}
+
+/* === Título principal === */
+#mensaje-rector.hospedaje .mensaje-texto.hospedaje h3 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #2f4d70;
+  text-align: left;
+}
+
+/* === Subtítulos de secciones === */
+.card-hospedaje h4 {
+  font-size: 27px;
+  color: #1e3d59;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* === Sub-subtítulos === */
+.card-hospedaje h5 {
+  font-size: 25px;
+  color: #2f5983;
+  margin-top: 1px;
+  margin-bottom: 6px;
+  font-weight: 650;
+}
+
+/* === Tarjetas === */
+.card-hospedaje {
+  background-color: #ffffff;
+  border: 1px solid #d0e2f3;
+  border-left: 6px solid #427ca2;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(14, 38, 70, 0.05);
+  transition: box-shadow 0.3s ease;
+  color: #222222;
+}
+
+.card-hospedaje:hover {
+  box-shadow: 0 6px 18px rgba(14, 38, 70, 0.15);
+}
+
+/* === Subtarjetas === */
+.card-hospedaje.subtipo {
+  background-color: #fcfdff;
+  border-left-color: #2f5983;
+  margin-top: 15px;
+}
+
+/* === Imágenes de hotel === */
+.card-hospedaje img,
+.galeria-en-fila img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 10px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card-hospedaje img:hover,
+.galeria-en-fila img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(14, 38, 70, 0.25);
+}
+
+/* === Galería horizontal === */
+.galeria-en-fila {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.galeria-en-fila img {
+  flex: 1 1 calc(33.3% - 10px);
+  max-width: calc(33.3% - 10px);
+  max-height: 200px;
+}
+
+/* === Párrafos === */
+.card-hospedaje p {
+  margin: 5px 0;
+  word-break: break-word;
+  font-family: 'Segoe UI', sans-serif;
+  color: #222222;
+}
+
+/* === Listas con icono Material === */
+.card-hospedaje ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.card-hospedaje ul li {
+  position: relative;
+  list-style: none;
+  padding-left: 30px;
+  margin-bottom: 6px;
+  color: #222222;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+}
+
+.card-hospedaje ul li::before {
+  content: "star_half";
+  font-family: "Material Symbols Outlined";
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: #427ca2;
+  font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+}
+
+/* === Notas === */
+.card-hospedaje .nota {
+  background-color: #e8f0f7;
+  border-left: 4px solid #2f5983;
+  padding: 12px 14px;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #1e3d59;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card-hospedaje .nota i {
+  color: #427ca2;
+  font-size: 1.3rem;
+  margin-top: 4px;
+}
+
+/* === Enlaces === */
+.card-hospedaje a {
+  color: #427ca2;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.card-hospedaje a:hover {
+  text-decoration: underline;
+  color: #2f5983;
+}
+
+/* === Controles de carrusel === */
+.carousel-controls-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.carousel-controls-bottom button {
+  background-color: #0e2646;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-controls-bottom button:hover {
+  background-color: #427ca2;
+}
+
+/* === TABLET (600px a 1024px) === */
+@media (min-width: 600px) and (max-width: 1024px) {
+  #mensaje-rector.hospedaje {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+
+  .mensaje-texto.hospedaje {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  #mensaje-rector.hospedaje .mensaje-texto.hospedaje p {
+    font-size: 15px;
+  }
+
+  #mensaje-rector.hospedaje .mensaje-texto.hospedaje h3 {
+    font-size: 30px;
+  }
+
+  .card-hospedaje h4 {
+    font-size: 22px;
+  }
+
+  .card-hospedaje h5 {
+    font-size: 20px;
+  }
+
+  .card-hospedaje {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .card-hospedaje img,
+  .galeria-en-fila img {
+    max-height: 180px;
+    margin: 8px 0;
+  }
+
+  .galeria-en-fila img {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .card-hospedaje p,
+  .card-hospedaje ul li {
+    font-size: 14px;
+  }
+
+  .card-hospedaje .nota {
+    font-size: 0.9rem;
+  }
+
+  .carousel-controls-bottom button {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}
+
+/* === MÓVIL (≤599px) === */
+@media (max-width: 599px) {
+  #mensaje-rector.hospedaje {
+    max-width: 100%;
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .mensaje-texto.hospedaje {
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 0 10px;
+  }
+
+  #mensaje-rector.hospedaje .mensaje-texto.hospedaje p {
+    font-size: 13px;
+  }
+
+  #mensaje-rector.hospedaje .mensaje-texto.hospedaje h3 {
+    font-size: 26px;
+  }
+
+  .card-hospedaje h4 {
+    font-size: 18px;
+  }
+
+  .card-hospedaje h5 {
+    font-size: 16px;
+  }
+
+  .card-hospedaje {
+    padding: 12px;
+    margin-bottom: 18px;
+  }
+
+  .card-hospedaje img,
+  .galeria-en-fila img {
+    max-height: 140px;
+    margin: 6px 0;
+  }
+
+  .galeria-en-fila {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+  }
+
+  .galeria-en-fila img {
+    flex: 0 0 auto;
+    max-width: 80%;
+  }
+
+  .card-hospedaje p,
+  .card-hospedaje ul li {
+    font-size: 12px;
+  }
+
+  .card-hospedaje .nota {
+    font-size: 0.85rem;
+  }
+
+  .carousel-controls-bottom {
+    gap: 15px;
+  }
+
+  .carousel-controls-bottom button {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+}

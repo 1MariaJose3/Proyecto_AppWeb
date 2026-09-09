@@ -1,0 +1,324 @@
+/* === Banner === */
+#banner-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.banner {
+    width: 100%;
+    display: block;
+}
+
+/* === Layout principal === */
+#main-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* === Sidebar === */
+#sidebar {
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* === PRÓXIMOS INICIOS === */
+#proximos-inicios {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+#proximos-inicios h3 {
+    background-color: #0d2243;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+}
+
+.inicio-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #fff;
+    padding: 14px 16px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 8px 18px rgba(45, 63, 86, 0.25);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.inicio-item:hover {
+    transform: translateY(-2px);
+}
+
+.inicio-dia {
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2d3f56;
+    border: 2px solid #2d3f56;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.inicio-detalle {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.inicio-detalle a {
+    color: #2d3f56;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Botón "Ver todos" */
+#btn-ver-todos {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    background-color: #0d2243;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 8px 18px rgba(45, 63, 86, 0.25);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#btn-ver-todos:hover {
+    background-color: #0e2646;
+    transform: translateY(-2px);
+}
+
+/* === HORARIO DE ATENCIÓN === */
+#horario-atencion {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 360px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+#horario-atencion h3 {
+    background-color: #0d2243;
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+#horario-atencion p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #fff;
+    padding: 12px 16px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #333;
+    box-shadow: 0 8px 18px rgba(45, 63, 86, 0.25);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#horario-atencion p:hover {
+    background-color: #f0f4fa;
+    transform: translateY(-2px);
+}
+
+.icono-horario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2d3f56;
+    border: 2px solid #2d3f56;
+    border-radius: 50%;
+    background-color: #fff;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) and (min-width: 600px) {
+  #main-content {
+    max-width: 95%;
+    padding: 0 16px;
+    gap: 20px;
+  }
+
+  #sidebar {
+    flex: 0 0 280px;
+    gap: 20px;
+  }
+
+  #proximos-inicios,
+  #horario-atencion {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  #proximos-inicios h3,
+  #horario-atencion h3 {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+
+  .inicio-item {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .inicio-dia {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    line-height: 34px;
+  }
+
+  .inicio-detalle {
+    font-size: 0.85rem;
+  }
+
+  .inicio-detalle a {
+    font-size: 0.9rem;
+  }
+
+  #btn-ver-todos {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  #horario-atencion p {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .icono-horario {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    font-size: 16px;
+  }
+}
+
+
+/* === MÓVIL (≤599px) === */
+@media (max-width: 599px) {
+  #main-content {
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 20px;
+  }
+
+  #sidebar {
+    flex: 1 1 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #proximos-inicios,
+  #horario-atencion {
+    max-width: 100%;
+    width: 100%;
+  }
+
+.inicio-item {
+  display: flex;
+  flex-direction: row; /* Igual que los horarios */
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.inicio-item:hover {
+  background-color: #f0f4fa;
+  transform: translateY(-2px);
+}
+
+.inicio-dia {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  border: 2px solid #2d3f56;
+  border-radius: 50%;
+  color: #2d3f56;
+  flex-shrink: 0;
+}
+
+.inicio-detalle {
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  font-size: 0.9rem;
+}
+
+.inicio-detalle a {
+  color: #2d3f56;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+
+  #btn-ver-todos {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  #horario-atencion p {
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+
+  .icono-horario {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 16px;
+  }
+}
+
+

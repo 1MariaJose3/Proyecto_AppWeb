@@ -1,0 +1,178 @@
+.enterate.slide-fade {
+  animation: slideFadeIn 0.6s ease-in-out;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+  font-family: 'Georgia', serif;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === CONTENIDO PRINCIPAL (MENSAJE RECTOR) === */
+#mensaje-rector.eventos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0; /* Importante para evitar overflow */
+}
+
+
+.tabla-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+
+.tabla-elegante {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #dcdfe3;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}   
+
+.tabla-elegante .titulo-tabla {
+  background-color: #2f4d70;
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  padding: 18px;
+  letter-spacing: 1px;
+}
+
+.tabla-elegante .encabezados th {
+  background-color: #f2f6fa;
+  color: #2c3e50;
+  font-weight: 600;
+  padding: 14px;
+  font-size: 17px;
+  text-align: center;
+  border-bottom: 2px solid #d5dce2;
+}
+
+.tabla-elegante .categoria td {
+  background-color: #d6eaf8;
+  color: #1a5276;
+  font-weight: 700;
+  text-align: center;
+  font-size: 19px;
+  padding: 12px;
+  border-top: 2px solid #aed6f1;
+}
+
+.tabla-elegante td {
+  padding: 14px 16px;
+  font-size: 16px;
+  color: #2e2e2e;
+  border-bottom: 1px solid #ecf0f1;
+  text-align: left;
+  vertical-align: middle;
+  transition: all 0.25s ease;
+}
+
+/* Enlace en programa */
+.tabla-elegante a {
+  color: #1c3d5a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.tabla-elegante a:hover {
+  color: #e67e22;
+  text-decoration: underline;
+}
+
+/* Efecto hover sobre la fila del programa */
+.tabla-elegante tr.fila-hover:hover {
+  background-color: #f4faff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 1;
+  position: relative;
+}
+
+
+/* === TABLET (600px a 1024px) === */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .enterate.slide-fade {
+    max-width: 100%;      /* Más ajustado que en escritorio */
+    margin: 20px auto;   /* Menos espacio arriba/abajo */
+    padding: 0 12px;
+    font-size: 15px;     /* Texto un poco más pequeño */
+  }
+
+  .tabla-elegante .titulo-tabla {
+    font-size: 20px;
+    padding: 14px;
+  }
+
+  .tabla-elegante .encabezados th {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .tabla-elegante .categoria td {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .tabla-elegante td {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
+
+/* === MÓVIL (≤599px) === */
+@media (max-width: 599px) {
+  .enterate.slide-fade {
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 0 8px;
+    font-size: 13px;
+  }
+
+  .tabla-elegante .titulo-tabla {
+    font-size: 16px;
+    padding: 10px 6px;
+  }
+
+  .tabla-elegante .encabezados th {
+    font-size: 12px;
+    padding: 8px 6px;
+  }
+
+  .tabla-elegante .categoria td {
+    font-size: 14px;
+    padding: 8px 6px;
+  }
+
+  .tabla-elegante td {
+    font-size: 12px;
+    padding: 8px 6px;
+  }
+
+  /* Ajustar links para pantallas pequeñas */
+  .tabla-elegante a {
+    font-size: 13px;
+  }
+
+  /* Opcional: hacer la tabla scrollable horizontal */
+  .tabla-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Suaviza el scroll en iOS */
+  }
+}

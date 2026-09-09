@@ -1,0 +1,118 @@
+/* ===== Estilo del título CAMPUS ===== */
+.campus-title {
+  font-size: 96px;
+  font-weight: bold;
+  color: #031424;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* ===== Contenedor principal ===== */
+.campus-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* ===== Ítem de campus ===== */
+.campus-item {
+  flex: 1 1 180px;
+  max-width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.campus-item:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Contenedor de imagen ===== */
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ===== Imagen del campus ===== */
+.campus-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.image-container:hover .campus-image {
+  transform: scale(1.07);
+  filter: brightness(75%) saturate(110%);
+}
+
+/* ===== Etiqueta sobre imagen ===== */
+.campus-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 43, 91, 0.85);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+}
+
+.image-container:hover .campus-label {
+  background: rgba(255, 255, 255, 0.95);
+  color: #002B5B;
+}
+
+/* ===== Responsive: Tablets ===== */
+@media (max-width: 992px) {
+  .campus-container {
+    gap: 1.25rem;
+  }
+
+  .campus-item {
+    max-width: 45%;
+  }
+}
+
+/* ===== Responsive: Celulares grandes ===== */
+@media (max-width: 768px) {
+  .campus-title {
+    font-size: clamp(1.8rem, 7vw, 2.8rem);
+  }
+
+  .campus-item {
+    max-width: 80%;
+  }
+
+  .campus-label {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
+
+/* ===== Responsive: Celulares pequeños ===== */
+@media (max-width: 576px) {
+  .campus-title {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+  }
+
+  .campus-item {
+    max-width: 100%;
+  }
+
+  .campus-label {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}

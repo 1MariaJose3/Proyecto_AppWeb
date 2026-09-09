@@ -1,0 +1,81 @@
+/* Animación suave */
+.slide-fade {
+  animation: slideFadeIn 0.6s ease-in-out;
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#mensaje-rector.bienvenida {
+  background-color: #ffffff;
+  padding: 40px 48px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  color: #222222;
+  font-family: 'Georgia', serif;
+  font-size: 18px; 
+  line-height: 1.75;
+  max-width: 850px;
+  margin: 15px auto;
+  border: 6px solid #2f4d70;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+#mensaje-rector.bienvenida h3 {
+  font-size: 38px; 
+  font-weight: 700;
+  color: #34495e;
+  margin-bottom: 21px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+}
+
+#mensaje-rector.bienvenida p strong {
+  font-weight: 700;
+  color: #2c3e50;
+  font-style: normal;
+}
+
+/* === TABLET (600px a 1024px) === */
+@media (min-width: 600px) and (max-width: 1024px) {
+  #mensaje-rector.bienvenida {
+    padding: 24px 30px;      /* menos padding que escritorio */
+    font-size: 16px;         /* texto un poco más pequeño */
+    max-width: 650px;        /* ancho máximo un poco más pequeño */
+    margin: 20px auto;
+  }
+
+  #mensaje-rector.bienvenida h3 {
+    font-size: 28px;         /* título más pequeño */
+    margin-bottom: 18px;
+  }
+}
+
+
+/* === RESPONSIVO PARA MÓVIL === */
+@media (max-width: 599px) {
+  #mensaje-rector.bienvenida {
+    padding: 20px;
+    font-size: 16px;
+    border-width: 4px;
+    margin: 15px auto;
+  }
+
+  #mensaje-rector.bienvenida h3 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  #mensaje-rector.bienvenida p {
+    text-align: left;
+  }
+}

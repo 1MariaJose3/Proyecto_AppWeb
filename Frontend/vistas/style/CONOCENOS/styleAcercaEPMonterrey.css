@@ -1,0 +1,51 @@
+/* Contenedor principal */
+#mensaje-rector.epmonterrey {
+  background-color: #ffffff;
+  padding: 32px 48px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  font-family: 'Georgia', serif;
+  color: #222222;
+  max-width: 850px;
+  margin: 15px auto;
+  border-radius: 12px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.75;
+}
+
+/* Título */
+#mensaje-rector.epmonterrey h3 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2f4d70;
+}
+
+/* Párrafos */
+#mensaje-rector.epmonterrey p {
+  margin-bottom: 19px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.75;
+}
+
+/* === TABLET (600px a 1024px) === */
+@media (min-width: 600px) and (max-width: 1024px) {
+  #mensaje-rector.epmonterrey {
+    padding: 24px 32px;       /* menos padding */
+    max-width: 650px;         /* ancho máximo menor */
+    font-size: 16px;          /* texto un poco más pequeño */
+    margin: 15px auto;
+  }
+
+  #mensaje-rector.epmonterrey h3 {
+    font-size: 28px;          /* título más pequeño */
+    margin-bottom: 16px;
+  }
+
+  #mensaje-rector.epmonterrey p {
+    font-size: 16px;          /* párrafos más pequeños */
+    margin-bottom: 14px;
+    line-height: 1.6;         /* línea un poco más compacta */
+  }
+}

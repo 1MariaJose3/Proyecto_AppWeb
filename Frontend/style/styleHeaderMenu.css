@@ -1,0 +1,732 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+/* ======== RESET Y TIPOGRAFÍA ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ======== ESTILOS GENERALES ======== */
+body {
+  background: white;
+}
+
+/* ======== HEADER Y MENÚ PRINCIPAL ======== */
+header {
+  background-color: #041b2d;
+  color: white;
+  position: relative;
+  z-index: 1000;
+}
+
+.cabeza_menu {
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1100;
+}
+
+.logo_menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.logo_menu img {
+  height: 80px;
+}
+
+/* ======== BOTÓN HAMBURGUESA BOOTSTRAP ======== */
+.navbar-toggler {
+  background: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-toggler i {
+  color: #ffffffe7;
+  font-size: 30px;
+}
+
+/* ======== CONTENIDO DEL MENÚ ======== */
+.menu_contenido {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-grow: 2;
+  padding-left: 30px;
+  background-color: #041b2d;
+}
+
+.btns_menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.menu_item {
+  position: relative;
+  z-index: 1100;
+}
+
+.btn_principal {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  z-index: 1101;
+}
+
+.btn_principal:hover {
+  background: rgba(255, 255, 255, 0.27);
+  color: black;
+  font-weight: bold;
+}
+
+/* ======== REDES SOCIALES ======== */
+.redes_menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 10px 0 35px;
+  z-index: 1101;
+}
+
+.btn_redes {
+  font-size: 20px;
+  color: #041b2d;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.redes_menu .btn_redes:hover {
+  background: #0a2d48;
+  box-shadow: 0 0 12px 4px rgba(248, 247, 247, 0.74);
+  transform: translateY(-5px);
+  color: white;
+}
+
+/* ======== MEGA MENÚ ======== */
+#megaMenuGlobalContainer {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1050;
+  overflow: visible;
+}
+
+.mega_menu {
+  position: relative;
+}
+
+.mega_contenedor {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 15px 40px 25px 40px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 8px 25px rgba(0, 70, 150, 0.15);
+  border-top: 4px solid #3a6fcf;
+  z-index: 1000;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  display: flex;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.mega_contenedor.activo {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Categorías y contenido del mega menú */
+.mega_categorias {
+  flex: 1;
+  padding-bottom: 20px;
+  min-width: 250px;
+  border-right: 1px solid #aac3f5;
+}
+
+.mega_contenido {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-left: 30px;
+}
+
+.mega_columna {
+  flex: 1;
+  min-width: 200px;
+  padding-right: 20px;
+  border-right: 1px solid #aac3f5;
+}
+
+.mega_columna:last-child {
+  border-right: none;
+  padding-right: 20px;
+}
+
+.mega_columna h4 {
+  font-size: 20px;
+  color: #254e8b;
+  margin: 20px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #3a6fcf;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mega_columna h4::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 800;
+  content: "\f19d";
+  color: #3a6fcf;
+}
+
+/* ======== BOTONES DE CATEGORÍA ======== */
+.categoria_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white;
+  padding: 15px 20px;
+  border: none;
+  border-bottom: 1px solid #aac3f5;
+  width: 100%;
+  font-size: 20px;
+  color: #254e8b;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  white-space: normal;
+  text-align: left;
+}
+
+.categoria_btn:last-child {
+  border-bottom: none;
+}
+
+.categoria_btn i {
+  font-size: 20px;
+  color: #759ce1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.categoria_btn:hover {
+  background-color: #e0e8ff;
+}
+
+.categoria_btn:hover i {
+  transform: translateX(6px);
+  color: #3a6fcf;
+}
+
+/* ======== TARJETAS DE PROGRAMAS ======== */
+.programa_card {
+  background: transparent;
+  text-align: center;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.programa_card:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.programa_card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 5px 0;
+  border: 3px solid #a7befd;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.programa_card img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(37, 78, 139, 0.5);
+}
+
+.programa_card a {
+  display: block;
+  color: #254e8b;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.programa_card a:hover {
+  color: #3a6fcf;
+}
+
+/* Scroll para listas de programas */
+.programas_maestrias,
+.programas_diplomados,
+.programas_especialidades {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.programas_maestrias::-webkit-scrollbar,
+.programas_diplomados::-webkit-scrollbar,
+.programas_especialidades::-webkit-scrollbar {
+  width: 6px;
+}
+
+.programas_maestrias::-webkit-scrollbar-thumb,
+.programas_diplomados::-webkit-scrollbar-thumb,
+.programas_especialidades::-webkit-scrollbar-thumb {
+  background-color: #aac3f5;
+  border-radius: 4px;
+}
+
+/* ======== BOTONES HORIZONTALES: CONÓCENOS Y CAMPUS ======== */
+.mega_categorias_horizontal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.mega_categorias_horizontal .horizontal_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #254e8b;
+  background: #f7f9fc;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+.mega_categorias_horizontal .horizontal_btn:hover {
+  background-color: #dbe6fb;
+  color: #3a6fcf;
+  border-bottom: 3px solid #3a6fcf;
+}
+
+.mega_categorias_horizontal .horizontal_btn .texto_boton {
+  line-height: 1;
+}
+
+.mega_categorias_horizontal .horizontal_btn i {
+  font-size: 18px;
+  color: #3a6fcf;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.mega_categorias_horizontal .horizontal_btn:hover i {
+  transform: translateX(6px);
+  color: #254e8b;
+}
+
+/* ======== OFFCANVAS (MENÚ MÓVIL) ======== */
+.offcanvas {
+  background-color: #041b2d !important;
+  color: #e0e7ff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.offcanvas .btns_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 0;
+}
+
+.offcanvas .menu_item {
+  width: 100%;
+}
+
+.offcanvas .btn_principal {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 18px;
+  text-align: left;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid rgba(240, 244, 248, 0.2);
+  background: transparent;
+  color: #f0f4f8;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+  outline-offset: 2px;
+}
+
+.offcanvas .btn_principal:hover,
+.offcanvas .btn_principal:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #d1e4ff;
+  border-color: #3a6fcf;
+  outline: none;
+}
+
+.offcanvas .submenu {
+  position: static;
+  display: none;
+  background: #062847;
+  color: #c8d4ff;
+  padding: 14px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 12px 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.offcanvas .submenu.activo {
+  display: block;
+}
+
+.offcanvas .submenu_opcion {
+  display: block;
+  padding: 10px 14px;
+  color: #c8d4ff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.offcanvas .submenu_opcion:hover,
+.offcanvas .submenu_opcion:focus {
+  background: rgba(58, 111, 207, 0.3);
+  color: #dbe6ff;
+  outline: none;
+}
+
+/* Redes sociales offcanvas */
+.offcanvas .redes_menu {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px 0;
+}
+
+.offcanvas .btn_redes {
+  font-size: 22px;
+  color: #041b2d;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.offcanvas .btn_redes:hover,
+.offcanvas .btn_redes:focus {
+  background: #3a6fcf;
+  box-shadow: 0 8px 20px rgba(58, 111, 207, 0.7);
+  color: white;
+  transform: translateY(-6px);
+  outline: none;
+}
+
+.submenu_programas {
+  padding-left: 1.2em;
+  background-color: #062847;
+}
+
+.submenu_programa_opcion {
+  display: block;
+  padding: 0.6em 0;
+  color: #b9c7ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 15px;
+}
+
+.submenu_programa_opcion:hover,
+.submenu_programa_opcion:focus {
+  text-decoration: underline;
+  color: #dbe6ff;
+  outline: none;
+}
+
+.offcanvas-backdrop.show {
+  background-color: transparent !important;
+}
+
+.offcanvas .offcanvas-title,
+#menuOffcanvasLabel {
+  color: white !important;
+  font-weight: bold;
+}
+
+.offcanvas .btn-close {
+  filter: invert(1);
+}
+
+/* ======== OCULTAR MEGA MENÚ EN MÓVIL ======== */
+@media (max-width: 991.98px) {
+  .mega_menu .mega_contenedor,
+  .mega_categorias_horizontal {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .submenu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo_menu img {
+    height: 60px;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+}
+
+/* ======== AJUSTES RESPONSIVOS CABEZA Y MENÚ ======== */
+@media (min-width: 992px) and (max-width: 1356px) {
+  .cabeza_menu {
+    padding: 12px 24px;
+  }
+
+  .logo_menu img {
+    height: 60px;
+  }
+
+  .menu_contenido {
+    gap: 20px;
+    padding-left: 10px;
+  }
+
+  .btn_principal {
+    font-size: 17px;
+    padding: 10px 14px;
+  }
+
+  .redes_menu {
+    margin-left: 15px;
+    gap: 6px;
+  }
+
+  .btn_redes {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1046px) {
+  .cabeza_menu {
+    padding: 10px 20px;
+  }
+
+  .logo_menu img {
+    height: 50px;
+  }
+
+  .menu_contenido {
+    gap: 14px;
+    padding-left: 8px;
+  }
+
+  .btn_principal {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .redes_menu {
+    margin-left: 10px;
+    gap: 4px;
+  }
+
+  .btn_redes {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+/* ======== AJUSTES MEGA MENÚ BOTONES HORIZONTALES ======== */
+@media (min-width: 992px) and (max-width: 1356px) {
+  .mega_categorias_horizontal {
+    gap: 12px;
+  }
+
+  .mega_categorias_horizontal .horizontal_btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .mega_categorias_horizontal .horizontal_btn i {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1046px) {
+  .mega_categorias_horizontal {
+    gap: 8px;
+  }
+
+  .mega_categorias_horizontal .horizontal_btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .mega_categorias_horizontal .horizontal_btn i {
+    font-size: 14px;
+  }
+}
+
+
+
+/* Ajustes offcanvas según pantalla */
+@media (min-width: 992px) and (max-width: 1046px) {
+  .offcanvas {
+    font-size: 15px;
+  }
+
+  .offcanvas .btn_principal {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  .offcanvas .submenu {
+    padding: 12px 20px;
+    font-size: 14.5px;
+  }
+
+  .offcanvas .submenu_opcion {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .offcanvas .redes_menu {
+    gap: 14px;
+    padding: 20px 0;
+  }
+
+  .offcanvas .btn_redes {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .submenu_programa_opcion {
+    font-size: 14px;
+    padding: 0.5em 0;
+  }
+}
+
+@media (min-width: 1047px) and (max-width: 1356px) {
+  .offcanvas {
+    font-size: 15.5px;
+  }
+
+  .offcanvas .btn_principal {
+    font-size: 17px;
+    padding: 14px 18px;
+  }
+
+  .offcanvas .submenu {
+    padding: 13px 22px;
+    font-size: 15px;
+  }
+
+  .offcanvas .submenu_opcion {
+    padding: 9px 13px;
+    font-size: 14.5px;
+  }
+
+  .offcanvas .redes_menu {
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .offcanvas .btn_redes {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .submenu_programa_opcion {
+    font-size: 14.8px;
+    padding: 0.55em 0;
+  }
+}
+
+
